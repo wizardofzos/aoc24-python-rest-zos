@@ -44,8 +44,10 @@ docs.register(COBOL)
 
 from endpoints import *
 # Add the solutions per day per part...
-# api.add_resource(REXXD01P1, '/d01p01-rexx')
+# api.add_resource(REXXD01P1, '/d01p1-rexx')
 # docs.register(REXXD01P1)
+# api.add_resource(PYTHOND01P1, '/d01p1-pyton')
+# docs.register(PYTHOND01P1)
 
 if __name__ == '__main__':
     import os
