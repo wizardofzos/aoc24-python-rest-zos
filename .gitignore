@@ -1,0 +1,7 @@
+lib*
+pyvenv.cfg
+bin*
+*.pyc
+*.lst
+*.o
+a.out

@@ -1,0 +1,9 @@
+*.py                 git-encoding=iso8859-1 zos-working-tree-encoding=ibm-1047 linguist-language=python
+*.rex                git-encoding=iso8859-1 zos-working-tree-encoding=ibm-1047 linguist-language=REXX
+*.ebcdic             git-encoding=iso8859-1 zos-working-tree-encoding=ibm-1047 linguist-language=REXX
+*.ascii              git-encoding=iso8859-1 zos-working-tree-encoding=iso8859-1 linguist-language=REXX
+.gitattributes       git-encoding=iso8859-1 zos-working-tree-encoding=iso8859-1
+.gitignore           git-encoding=iso8859-1 zos-working-tree-encoding=iso8859-1
+*.md                 git-encoding=iso8859-1 zos-working-tree-encoding=ibm-1047 linguist-language=markdown
+requirements.txt     git-encoding=iso8859-1 zos-working-tree-encoding=iso8859-1
+*.png                binary
