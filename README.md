@@ -38,7 +38,7 @@ Don't let the hardware requirements fool you, it will run on your ZPDT/ZD&T envi
 
 ## Get it without my solutions
 
-If you want to work with this, and not have my solutions in, make sure to checkout the 'no-solutions' branch
+If you want to work with this, and not have my solutions in, make sure to checkout the 'no-solutions' tag
 
 Then point your browser to http://<ip_or_dns_of_your_mainframe>:12345/swagger-ui and...
 
