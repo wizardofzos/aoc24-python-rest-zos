@@ -9,6 +9,7 @@ import os
 
 from subprocess import Popen, PIPE
 from .fileupload import COBOLFileSchema
+import datetime
 
 #  Restful way of creating APIs through Flask Restful
 class COBOL(MethodResource, Resource):
@@ -21,8 +22,9 @@ class COBOL(MethodResource, Resource):
     def post(self, cobolsource, puzzle=None):
         # COMPILE THE COBOL
         infile = f"/tmp/{uuid.uuid4()}"
-        cobsrc = f"/tmp/{uuid.uuid4()}.cbl"
-        gofile = f"/tmp/{uuid.uuid4()}"
+        cobid  = f"{uuid.uuid4()}"
+        cobsrc = f"/tmp/{cobid}.cbl"
+
         cobolsource.save(infile)  # will be iso8859-1
         os.system(f"iconv -f iso8859-1 -t ibm-1047 {infile} > {cobsrc}") # make ebcdic
         os.system(f"chtag -tc ibm-1047 {cobsrc}")  # tag it and bag it
@@ -30,13 +32,13 @@ class COBOL(MethodResource, Resource):
         stdout, stderr = process.communicate()
         exit_code = process.wait()
         errlines = stderr.decode('cp1047').split('\n')
-        print(stdout.decode('cp1047'))
-        print(errlines)
-        print(exit_code)
         if exit_code < 4:
+            start = datetime.datetime.now()
             process = Popen(['./a.out'], stdout=PIPE, stderr=PIPE) # run it :)
             progout, progerr = process.communicate()
+            stop = datetime.datetime.now()
             result = progout.decode('utf-8')
         else:
             result = "Compiler Errors"
-        return {'result':result,'compiler-out':errlines}
+            
+        return {'result':result,'compiler-out':errlines,'duration': f"{stop-start}"}
