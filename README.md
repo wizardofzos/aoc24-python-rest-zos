@@ -16,6 +16,9 @@ So I've made this REST API that either runs python code, COBOL or REXX and shows
 - Python available
 - Network connectivity to the outside world    
 
+If you need python on your z/OS system, just follow the EPLS installer guide via https://www.ibm.com/docs/en/python-zos/3.10?topic=configuration-installing-configuring-pax-format.
+Don't let the hardware requirements fool you, it will run on your ZPDT/ZD&T environment without any issues.
+
 ## Preparing for first run
 
     git clone git@github.com:wizardofzos/aoc2024.git
