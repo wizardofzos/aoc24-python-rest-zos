@@ -5,7 +5,7 @@ Based on  https://github.com/wizardofzos/flask-rest-zos/
 
 ## What's this?
 
-Repo for my solutions to AOC2021. More info: https://adventofcode.com/2024
+Repo for my solutions to Advent of Code. More info: https://adventofcode.com/2024
 Wanted to have some extra practice on flask-rest and also do some REXX, some python and maybe some COBOL. 
 
 So I've made this REST API that either runs python code, COBOL or REXX and shows the result...
@@ -32,6 +32,10 @@ So I've made this REST API that either runs python code, COBOL or REXX and shows
     # Optional if you want another port than 12345
     export PORT=<port-you-want>
     python aoc.py
+
+## Get it without my solutions
+
+If you want to work with this, and not have my solutions in, make sure to checkout the 'no-solutions' branch
 
 Then point your browser to http://<ip_or_dns_of_your_mainframe>:12345/swagger-ui and...
 
