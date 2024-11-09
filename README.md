@@ -1,4 +1,4 @@
-# AOC 2021 on z/OS
+# AOC 2024 on z/OS
 
 
 Based on  https://github.com/wizardofzos/flask-rest-zos/
@@ -46,8 +46,9 @@ Then point your browser to http://<ip_or_dns_of_your_mainframe>:12345/swagger-ui
 
 Every endpoint has it's own file in /endpoints. 
 
-If you want to do REXX, copy the rexx.py endpoint for that day (copy it to d01p01.py for instance).
-Make sure to change the class name to REXXD1P1 (or other) and include that in you aoc.py
+If you want to do REXX, copy the rexx.py endpoint for that day (copy it to rexxd01p1.py for instance).
+Make sure to change the class name to REXXD01P1 (or other) and include that in you aoc.py
+(see the comments in the `endpoints/__init__.py` and `aoc.py`)
 
 Also make sure to add the new classes to `endpoints\__init__.py`
 
