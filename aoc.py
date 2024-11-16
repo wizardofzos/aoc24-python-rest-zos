@@ -16,7 +16,7 @@ app.config.update({
         title='Advent of Code 2024',
         version='v1',
         info={'description': 'My <a href="https://adventofcode.com">Advent of Code 2024</a> solutions.' +
-        '<br />Github Repo: <a href="https://github.com/wizardofzos/aoc2024">github.com/wizardofzos/aoc2024</a>'+
+        '<br />Github Repo: <a href="https://github.com/wizardofzos/aoc24-python-rest-zos">github.com/wizardofzos/aoc24-python-rest-zos</a>'+
         '<br /><b>Warning</b>:All [POST] endpoints assume a puzzle input with "Windows Line Ends "' +
         '(meaning a single 0x0d).'},
         plugins=[MarshmallowPlugin()],
