@@ -16,7 +16,8 @@ sys.path.append('../constants')
 
 
 
-from constants import REXX_PATH 
+from constants import REXX_PATH
+
 
 #  Restful way of creating APIs through Flask Restful
 class REXX(MethodResource, Resource):
@@ -46,7 +47,6 @@ class REXX(MethodResource, Resource):
         print(stdout.decode('utf-8'))
         print(stderr.decode('utf-8'))
         parts = stdout.decode('utf-8').split('=')
-        print(parts)
         os.remove(infile)
         os.remove(gofile)
         result = {}

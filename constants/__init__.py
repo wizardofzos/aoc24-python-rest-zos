@@ -1,1 +1,6 @@
-REXX_PATH='/prj/aoc24/rexxes'
+import os
+
+
+
+
+REXX_PATH=f'{os.getcwd()}/rexxes'
